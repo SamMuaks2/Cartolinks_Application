@@ -1,7 +1,7 @@
 "use client";
 
-import Image from 'next/image'
-import { useState } from 'react'
+import Image from "next/image";
+import { useState } from "react";
 
 
 const slides = [
@@ -78,15 +78,15 @@ export default function HeroCarousel() {
             <div className="absolute bottom-0 right-4 flex gap-2 z-20">
                 <button
                     onClick={prevSlide}
-                    className="bg-black/50 hover:bg-black/70 text-white px-3 py-2 rounded-full"
+                    className="text-black px-3 py-2 rounded-full"
                 >
-                    ◀
+                    <Image src="/previous.png" alt="Previous" width={20} height={20} />
                 </button>
                 <button
                     onClick={nextSlide}
-                    className="bg-black/50 hover:bg-black/70 text-white px-3 py-2 rounded-full"
+                    className="text-black px-3 py-2 rounded-full"
                 >
-                    ▶
+                    <Image src="/next.png" alt="Previous" width={20} height={20} />
                 </button>
             </div>
         </div>
