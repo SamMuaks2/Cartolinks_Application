@@ -25,6 +25,11 @@ const slides = [
 export default function HeroCarousel() {
     const [idx, setIdx] = useState(0)
 
+    const nextSlide = () => setIdx((prev) => (prev + 1) % slides.length);
+    const prevSlide = () => setIdx((prev) => (prev - 1 + slides.length) % slides.length);
+
+    const slide = slides[idx];
+
 
     return (
         <div className="relative">
@@ -43,7 +48,7 @@ export default function HeroCarousel() {
                         <div className="absolute inset-0 bg-black/40 rounded-xl"></div>
 
                         <div className="relative z-10">
-                            <p className="mb-2 text-sm tracking-tight text-left">
+                            <p className="mb-2 text-xs tracking-tight text-left">
                                 {slide.tag}
                             </p>
 
@@ -51,16 +56,16 @@ export default function HeroCarousel() {
                                 {slide.title}
                             </h2>
 
-                            <div className="mt-6 flex gap-4">
+                            <div className="mt-6 flex gap-2">
                                 <div className="flex-col">
                                     <h4 className="mt-2 text-lg font-bold">{slide.subtitle}</h4>
-                                    <p className="mt-2 text-sm text-white max-w-prose">
+                                    <p className="mt-2 text-xs text-white max-w-prose">
                                         {slide.description}
                                     </p>
                                 </div>
 
-                                <div className="mt-8">
-                                    <button className="bg-white text-black dark:bg-slate-900 dark:text-white px-6 py-2 rounded-full shadow">
+                                <div className="mt-12">
+                                    <button className="bg-white text-ms text-black dark:bg-slate-900 dark:text-white px-6 py-2 rounded-full shadow whitespace-nowrap">
                                         Try {slide.title}
                                     </button>
                                 </div>
@@ -68,6 +73,21 @@ export default function HeroCarousel() {
                         </div>
                     </div>
                 ))}
+            </div>
+
+            <div className="absolute bottom-0 right-4 flex gap-2 z-20">
+                <button
+                    onClick={prevSlide}
+                    className="bg-black/50 hover:bg-black/70 text-white px-3 py-2 rounded-full"
+                >
+                    ◀
+                </button>
+                <button
+                    onClick={nextSlide}
+                    className="bg-black/50 hover:bg-black/70 text-white px-3 py-2 rounded-full"
+                >
+                    ▶
+                </button>
             </div>
         </div>
     );
