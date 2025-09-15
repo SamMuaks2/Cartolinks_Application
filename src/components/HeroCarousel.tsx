@@ -10,14 +10,14 @@ const slides = [
         title: 'WAN 2.2',
         subtitle: 'WAN 2.2 Image generation',
         description: 'Generate complex images with the brand new and powerful WAN 2.2 model. Exceptional prompt adherence and ultra-realistic textures.',
-        image: '/hero1-plain.png'
+        image: '/hero-1.png'
     },
     {
         tag: 'OPEN SOURCE MODEL',
         title: 'Open Source Model',
         subtitle: 'FLUX.1 Krea',
         description: "We're making the weights to our FLUX.1 Krea model open-source. Download and run our model weights, read the technical report, or generate with it in Krea Image",
-        image: '/hero2-plain.png'
+        image: '/hero-2.png'
     }
 ]
 
