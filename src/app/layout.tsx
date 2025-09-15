@@ -1,26 +1,30 @@
-import './globals.css'
-import { ReactNode } from 'react'
-// import { ThemeProvider } from "next-themes";
+"use client"
 
-import { ThemeProvider } from 'next-themes'
+import "./globals.css";
+import { ThemeProvider } from "next-themes";
+import type { ReactNode } from "react";
 
 
-export const metadata = {
-  title: 'Mohri Cartolinks Application',
-  description: 'Pixel-like UI built with Next.js + Tailwind',
-}
+// export const metadata = {
+//   title: 'Mohri Cartolinks Application',
+//   description: 'Pixel-like UI built with Next.js + Tailwind',
+// }
 
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+        >
           <div className="min-h-screen bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors">
             {children}
           </div>
         </ThemeProvider>
       </body>
-    </html>
+    </html >
   )
 }

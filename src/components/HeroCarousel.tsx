@@ -75,18 +75,18 @@ export default function HeroCarousel() {
                 ))}
             </div>
 
-            <div className="absolute bottom-0 right-4 flex gap-2 z-20">
+            <div className="absolute bottom right-10 flex z-20">
                 <button
                     onClick={prevSlide}
                     className="text-black px-3 py-2 rounded-full"
                 >
-                    <Image src="/previous.png" alt="Previous" width={20} height={20} />
+                    <Image src="/previous.png" alt="Previous" width={40} height={30} />
                 </button>
                 <button
                     onClick={nextSlide}
                     className="text-black px-3 py-2 rounded-full"
                 >
-                    <Image src="/next.png" alt="Previous" width={20} height={20} />
+                    <Image src="/next.png" alt="Previous" width={40} height={30} />
                 </button>
             </div>
         </div>
