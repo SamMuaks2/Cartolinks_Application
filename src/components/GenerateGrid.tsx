@@ -21,7 +21,7 @@ export default function GenerateGrid() {
                 <a className="text-sm text-slate-500">Show all</a>
             </div>
 
-            <div className="mt-4 grid grid-cols-4 gap-4">
+            <div className="mt-4 grid grid-cols-4 p-y-6 gap-4">
                 {items.map((it) => (
                     <div
                         key={it.title}
