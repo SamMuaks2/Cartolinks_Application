@@ -4,6 +4,7 @@ import Image from "next/image";
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import { ThemeToggle } from "@/app/theme-toggle";
 
 
 export default function Header() {
@@ -144,13 +145,15 @@ export default function Header() {
                         <p>Support</p>
                     </button>
 
-                    <Image
-                        src="/notification-icon.png"
-                        alt="Bell icon"
-                        width={20}
-                        height={20}
-                        className="object-contain bg-slate-100"
-                    />
+                    <a href="#">
+                        <Image
+                            src="/notification-icon.png"
+                            alt="Bell icon"
+                            width={20}
+                            height={20}
+                            className="object-contain bg-slate-100 rounded-full pt-3"
+                        />
+                    </a>
                 </nav>
 
 
@@ -158,7 +161,7 @@ export default function Header() {
                     {mounted ? (
                         <button
                             aria-label="Toggle Theme"
-                            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                             className="p-2 rounded-full bg-slate-100 dark:bg-slate-800"
                         >
                             {theme === 'dark' ? (
@@ -168,6 +171,8 @@ export default function Header() {
                             )}
                         </button>
                     ) : null}
+
+                    {/* <ThemeToggle /> */}
 
 
                     <div className="w-9 h-9 rounded-full bg-gradient-to-br from-pink-500 to-indigo-500 flex items-center justify-center text-white">S</div>
