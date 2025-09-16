@@ -172,8 +172,6 @@ export default function Header() {
                         </button>
                     ) : null}
 
-                    {/* <ThemeToggle /> */}
-
 
                     <div className="w-9 h-9 rounded-full bg-gradient-to-br from-pink-500 to-indigo-500 flex items-center justify-center text-white">S</div>
                 </div>
