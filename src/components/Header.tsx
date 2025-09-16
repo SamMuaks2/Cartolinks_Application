@@ -121,12 +121,40 @@ export default function Header() {
 
             <div className="flex items-center gap-3">
                 <nav className="hidden md:flex gap-4 text-sm text-slate-600 dark:text-slate-300">
-                    <button className="py-2 px-3 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">Gallery</button>
-                    <button className="py-2 px-3 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">Support</button>
+                    <button className="inline-flex py-2 px-3 rounded-full bg-slate-100 hover:bg-slate-200 dark:hover:bg-slate-800 gap-2">
+                        <Image
+                            src="/tag-gallery.png"
+                            alt="gallery-icon"
+                            width={20}
+                            height={20}
+                            className="object-contain"
+                        />
+
+                        <p>Gallery</p>
+                    </button>
+
+                    <button className="inline-flex py-2 px-3 rounded-full bg-slate-100 hover:bg-slate-200 dark:hover:bg-slate-800 gap-2">
+                        <Image
+                            src="/tag-support.png"
+                            alt="support-icon"
+                            width={20}
+                            height={20}
+                            className="object-contain"
+                        />
+                        <p>Support</p>
+                    </button>
+
+                    <Image
+                        src="/notification-icon.png"
+                        alt="Bell icon"
+                        width={20}
+                        height={20}
+                        className="object-contain bg-slate-100"
+                    />
                 </nav>
 
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center ml-2 gap-2">
                     {mounted ? (
                         <button
                             aria-label="Toggle Theme"
