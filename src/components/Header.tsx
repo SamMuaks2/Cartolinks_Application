@@ -4,7 +4,6 @@ import Image from "next/image";
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
-import { ThemeToggle } from "@/app/theme-toggle";
 
 
 export default function Header() {
@@ -18,11 +17,12 @@ export default function Header() {
             <div className="flex items-center gap-3">
                 <div className="flex items-center gap-3">
                     <Image
-                        src="/logo.png"
+                        // src="/logo.png"
+                        src={theme === "dark" ? "/logo_inverted.png" : "/logo.png"}
                         alt="krea AI Logo"
                         width={20}
                         height={20}
-                        className="object-contain"
+                        className="object-contain dark:invert"
                     />
 
                     <Image

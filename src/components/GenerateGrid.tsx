@@ -17,8 +17,8 @@ export default function GenerateGrid() {
     return (
         <div>
             <div className="flex items-center justify-between">
-                <h3 className="text-xl font-semibold">Generate</h3>
-                <a className="text-sm text-slate-500">Show all</a>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100">Generate</h3>
+                <a className="text-sm text-slate-500 dark:text-slate-300 hover:underline">Show all</a>
             </div>
 
             <div className="mt-4 grid grid-cols-4 p-y-6 gap-4">
@@ -41,7 +41,7 @@ export default function GenerateGrid() {
 
                         <div className="flex-1">
                             <div className="flex items-center gap-2">
-                                <h4 className="font-medium">{it.title}</h4>
+                                <h4 className="font-medium text-slate-800 dark:text-slate-100">{it.title}</h4>
 
                                 {it.badge ? (
                                     <span className="text-xs text-white bg-blue-500 px-2 py-0.5 rounded">
@@ -50,14 +50,15 @@ export default function GenerateGrid() {
                                 ) : null}
                             </div>
 
-                            <p className="text-xs text-slate-500 dark:text-slate-400">
+                            <p className="text-xs text-slate-600 dark:text-slate-400">
                                 {it.desc}
                             </p>
                         </div>
 
                         <div>
                             <button
-                                className=" text-xs bg-slate-100 dark:bg-slate-900 rounded flex justify-center items-center flex-shrink-0"
+                                className="text-xs text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-900 rounded flex justify-center items-center flex-shrink-0"
+                                // className=" text-xs bg-slate-100 dark:bg-slate-900 rounded flex justify-center items-center flex-shrink-0"
                                 style={{ width: "31px", height: "16px", flexDirection: "column" }}
                             >
                                 Open
